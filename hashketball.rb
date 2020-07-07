@@ -131,6 +131,7 @@ def num_points_scored(player_name)
   x = 0
   game_hash.each do |side, team_data|
     team_data[:players].each do |player_keys, blank|
+      puts player_keys
       player_keys.each do |label, value|
         if player_keys[label] == player_name
           x = player_keys[:points]
@@ -144,7 +145,6 @@ end
 def shoe_size(player_name)
   x = 0
   game_hash.each do |side, team_data|
-    puts team_data
     team_data[:players].each do |player_keys, blank|
       player_keys.each do |label, value|
         if player_keys[label] == player_name
